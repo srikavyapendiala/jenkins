@@ -1,0 +1,15 @@
+// Environment
+pipeline {
+  agent any
+
+  environment {
+     PROJECT_NAME = "ROBOSHOP"
+  }
+  stages {
+     stages('one') {
+        steps {
+           sh "echo ${PROJECT_NAME}"
+        }
+     }
+  }
+}
