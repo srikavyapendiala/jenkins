@@ -1,4 +1,4 @@
-// Environment
+// ENVIRONMENT
 pipeline {
   agent any
 
@@ -9,6 +9,15 @@ pipeline {
      stages('one') {
         steps {
            sh "echo ${PROJECT_NAME}"
+        }
+     }
+     stage('Two') {
+
+        environment {
+           PROJECT_NAME = "TODO"
+        }
+        steps {
+           sh echo "${PROJECT_NAME}"
         }
      }
   }
